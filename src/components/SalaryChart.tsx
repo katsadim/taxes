@@ -18,7 +18,7 @@ export const SalaryChart: FunctionComponent<Props> = (props: Props) => {
 
     return (
         <LineChart
-            width={500}
+            width={600}
             height={300}
             data={props.points}
             margin={{
@@ -28,13 +28,12 @@ export const SalaryChart: FunctionComponent<Props> = (props: Props) => {
                 bottom: 5,
             }}
         >
-            <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey="year" />
+            <CartesianGrid strokeDasharray="5 5" />
+            <XAxis dataKey="year" interval={0} angle={30} dx={20}/>
             <YAxis domain={determineMinAndMaxDomain(props.points)} />
             <Tooltip />
             <Legend />
             <Line type="monotone" dataKey="salary" stroke="#8884d8" activeDot={{ r: 8 }} />
-            {/*<Line type="monotone" dataKey="uv" stroke="#82ca9d" />*/}
         </LineChart>
     );
 };
