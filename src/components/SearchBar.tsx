@@ -1,5 +1,5 @@
 import React, { FunctionComponent, useState } from 'react';
-import { InputAdornment, TextField } from '@material-ui/core';
+import { InputAdornment, TextField } from '@mui/material';
 
 type Props = {
     handleChange: (searchTerm: number) => void;

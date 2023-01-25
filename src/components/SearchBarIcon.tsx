@@ -1,7 +1,8 @@
 import React, { FunctionComponent, useState } from 'react';
-import EuroSymbolIcon from '@material-ui/icons/EuroSymbol';
-import { IconButton } from '@material-ui/core';
-import { createStyles, makeStyles, Theme } from '@material-ui/core/styles';
+import EuroSymbolIcon from '@mui/icons-material/EuroSymbol';
+import { IconButton } from '@mui/material';
+import { createStyles, Theme } from '@mui/material/styles';
+import {  makeStyles } from '@mui/styles';
 
 const useStyles = makeStyles((theme: Theme) =>
     createStyles({

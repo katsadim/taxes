@@ -16,5 +16,8 @@ export const ZERO_SALARY: ChartNetSalaryPoint[] = [
     '2018',
     '2019',
     '2020',
+    '2021',
+    '2022',
+    '2023',
 ].map(year => ({ year, salary: 0 }));
 export const MIN_SALARY = 0;

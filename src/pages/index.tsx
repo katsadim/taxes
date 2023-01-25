@@ -1,11 +1,11 @@
 import React, { useState, FunctionComponent } from 'react';
-import Container from '@material-ui/core/Container';
-import Typography from '@material-ui/core/Typography';
+import Container from '@mui/material/Container';
+import Typography from '@mui/material/Typography';
 import customData from '../../static/salaries10000.json';
 import { YearlySalary } from '../models/salary';
 import SalaryChart from '../components/SalaryChart';
 import SearchBar from '../components/SearchBar';
-import { Grid, Box } from '@material-ui/core';
+import { Grid, Box } from '@mui/material';
 import SearchBarIcon, { IncomeType } from '../components/SearchBarIcon';
 import { MIN_SALARY } from '../constants';
 import { Copyright } from '../components/Copyright';
@@ -21,15 +21,15 @@ const Index: FunctionComponent = () => {
 
     return (
         <React.StrictMode>
-            <Container maxWidth="sm">
+            <Container maxWidth="md">
                 <Box my={4}>
-                    <Grid container spacing={4} justify="center">
-                        <Grid container item xs={12} justify="center">
+                    <Grid container spacing={4} justifyContent="center">
+                        <Grid container item xl={12} justifyContent="center">
                             <Typography variant="h4" component="h1" gutterBottom>
-                                Foroi
+                                Forolagnia
                             </Typography>
                         </Grid>
-                        <Grid container item xs={12} justify="center">
+                        <Grid container item xl={12} justifyContent="center">
                             <SearchBar
                                 handleChange={val => setSearchTerm(val)}
                                 max={getMaxSalaryForSelectedIncomeType(yearlySalary, selectedIncomeType)}
@@ -48,17 +48,17 @@ const Index: FunctionComponent = () => {
                                 )}
                             />
                         </Grid>
-                        <Grid container item xs={12}>
+                        <Grid container item xl={12}>
                             <SalaryChart
                                 points={convertSalaryToChartPoints(yearlySalary, searchTerm, selectedIncomeType)}
                             />
                         </Grid>
-                        <Grid container item xs={12} justify="center">
+                        <Grid container item xl={12} justifyContent="center">
                             <Link to="/about" color="secondary">
                                 Go to the about page
                             </Link>
                         </Grid>
-                        <Grid item xs={12}>
+                        <Grid item xl={12}>
                             <Copyright />
                         </Grid>
                     </Grid>

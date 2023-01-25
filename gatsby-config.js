@@ -17,6 +17,6 @@ module.exports = {
     `gatsby-plugin-typescript`,
   ],
   siteMetadata: {
-    title: 'My page',
+    title: 'Forolagnia',
   },
 };
