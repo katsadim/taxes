@@ -1,4 +1,5 @@
 module.exports = {
+  pathPrefix: "/taxes",
   plugins: [
     'gatsby-plugin-top-layout',
     {
