@@ -17,22 +17,22 @@ export const SalaryChart: FunctionComponent<Props> = (props: Props) => {
     };
 
     return (
-        <ResponsiveContainer width="90%" height={450}>
+        <ResponsiveContainer width="98%" height={400}>
             <LineChart
                 data={props.points}
                 margin={{
                     top: 5,
-                    right: 40,
-                    left: 60,
+                    right: 19,
+                    left: -10,
                     bottom: 5,
                 }}
             >
                 <CartesianGrid strokeDasharray="5 5"/>
-                <XAxis dataKey="year" interval={0} angle={30} dx={20}/>
+                <XAxis dataKey="year" interval={1} angle={35} dx={20} dy={5}/>
                 <YAxis domain={determineMinAndMaxDomain(props.points)}/>
                 <Tooltip/>
-                <Legend/>
                 <Line type="monotone" dataKey="salary" stroke="#8884d8" activeDot={{r: 8}}/>
+                <Legend wrapperStyle={{position: 'relative'}}/>
             </LineChart>
         </ResponsiveContainer>
 
