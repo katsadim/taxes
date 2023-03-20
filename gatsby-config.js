@@ -1,7 +1,6 @@
 const siteAddress = new URL("https://forolagnia.com")
 
 module.exports = {
-  pathPrefix: "/taxes",
   plugins: [
     {
       resolve: 'gatsby-plugin-material-ui',
@@ -18,13 +17,25 @@ module.exports = {
         trackingIds: ['G-37Z2QSN476'],
       }
     },
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: `Forolagnia`,
+        short_name: `Foroi`,
+        start_url: `/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#f7f0eb`,
+        display: `standalone`,
+        icon: "src/images/icon.png",
+      },
+    },
     'gatsby-plugin-top-layout',
     `gatsby-plugin-typescript`,
   ],
   siteMetadata: {
     title: 'Forolagnia',
     description: 'Forolagnia is Aftertax on steroids',
-    image: "/images/icon.jpg",
+    image: "icon.png",
     lang: 'en',
     url: siteAddress.hostname,
   },
