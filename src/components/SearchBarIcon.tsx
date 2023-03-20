@@ -1,19 +1,6 @@
 import React, { FunctionComponent, useState } from 'react';
 import EuroSymbolIcon from '@mui/icons-material/EuroSymbol';
 import { IconButton } from '@mui/material';
-import { createStyles, Theme } from '@mui/material/styles';
-import {  makeStyles } from '@mui/styles';
-
-const useStyles = makeStyles((theme: Theme) =>
-    createStyles({
-        iconButton: {
-            display: 'flex',
-            flexDirection: 'column',
-            margin: 'auto',
-            width: '45px',
-        },
-    }),
-);
 
 export enum IncomeType {
     GROSS = 'gross',
@@ -26,7 +13,6 @@ type Props = {
 };
 
 export const SearchBarIcon: FunctionComponent<Props> = (props: Props) => {
-    const classes = useStyles();
     const [incomeType, setIncomeType] = useState(IncomeType.GROSS);
     const toggleIncomeType = (): void => {
         const newIncomeType = toggleIncomeTypeFor(incomeType);
@@ -37,7 +23,6 @@ export const SearchBarIcon: FunctionComponent<Props> = (props: Props) => {
         <IconButton
             data-testid="income-type-change-button"
             disabled={props.disabled}
-            classes={{ label: classes.iconButton }}
             size="small"
             onClick={toggleIncomeType}
         >

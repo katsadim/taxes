@@ -1,16 +1,16 @@
-import React, { useState, FunctionComponent } from 'react';
+import React, {FunctionComponent, useState} from 'react';
 import Container from '@mui/material/Container';
 import Typography from '@mui/material/Typography';
 import customData from '../../static/salaries10000.json';
-import { YearlySalary } from '../models/salary';
+import {YearlySalary} from '../models/salary';
 import SalaryChart from '../components/SalaryChart';
 import SearchBar from '../components/SearchBar';
-import { Grid, Box } from '@mui/material';
-import SearchBarIcon, { IncomeType } from '../components/SearchBarIcon';
-import { MIN_SALARY } from '../constants';
-import { Copyright } from '../components/Copyright';
-import { convertSalaryToChartPoints } from '../utils/chartutils';
-import { getMaxSalaryForSelectedIncomeType, getMaxSalaryForOppositeOfSelectedIncomeType } from '../utils/salaryutils';
+import {Box, Grid} from '@mui/material';
+import SearchBarIcon, {IncomeType} from '../components/SearchBarIcon';
+import {MIN_SALARY} from '../constants';
+import {Copyright} from '../components/Copyright';
+import {convertSalaryToChartPoints} from '../utils/chartutils';
+import {getMaxSalaryForOppositeOfSelectedIncomeType, getMaxSalaryForSelectedIncomeType} from '../utils/salaryutils';
 import Link from '../components/Link';
 
 const yearlySalary = (customData as unknown) as YearlySalary;
@@ -59,7 +59,7 @@ const Index: FunctionComponent = () => {
                             </Link>
                         </Grid>
                         <Grid item xl={12}>
-                            <Copyright />
+                            <Copyright/>
                         </Grid>
                     </Grid>
                 </Box>
@@ -67,5 +67,9 @@ const Index: FunctionComponent = () => {
         </React.StrictMode>
     );
 };
+
+export const Head = () => <>
+    <title>Forolagnia</title>
+</>
 
 export default Index;
